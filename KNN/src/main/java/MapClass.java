@@ -1,12 +1,5 @@
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.StringTokenizer;
-
-import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
@@ -15,8 +8,6 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 public class MapClass extends Mapper<LongWritable, Text, Text, DistanceTarget>{
 
-    private final static IntWritable one = new IntWritable(1);
-    private Text word = new Text();
     private RecordsArray trainingSet;
 
     @Override

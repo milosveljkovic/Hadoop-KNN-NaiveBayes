@@ -24,7 +24,7 @@ public class Knn extends Configured implements Tool{
 
         Job job = new Job();
         job.setJarByClass(Knn.class);
-        job.setJobName("Word Counter With Stop Words Removal");
+        job.setJobName("KNN");
 
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
